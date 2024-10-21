@@ -235,7 +235,7 @@ footer {
     color: #888;
 }
 
-/* Animations */
+
 @keyframes fadeInDown {
     from {
         transform: translateY(-20px);
@@ -283,7 +283,7 @@ footer {
     vertical-align: middle; 
 }
 
-/* Media Queries voor responsiviteit */
+
 @media (max-width: 1200px) {
     header {
         padding: 20px;
