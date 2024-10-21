@@ -6,8 +6,8 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: #1a1a1a;
+    color: #e5e5e5;
     line-height: 1.6;
 }
 
@@ -15,20 +15,34 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #1e1e2f;
+    padding: 20px 40px;
+    background-color: #0d0d0d;
     color: white;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    margin-right: 10px;
+    animation: fadeInDown 1s ease-in-out;
 }
 
 .logo h1 {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 600;
+    color: #ffffff;
     letter-spacing: 1px;
-    animation: slideInLeft 1s ease-in-out;
+    animation: fadeInDown 1s ease-in-out;
 }
 
 nav ul {
@@ -37,23 +51,23 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 nav ul li a {
-    color: white;
+    color: #e5e5e5;
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #61dafb;
+    color: #f39c12; /* Accentkleur voor hover-effect */
 }
 
 #hero {
     height: 100vh;
-    background-color: #61dafb;
+    background-color: #0d0d0d;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,12 +77,13 @@ nav ul li a:hover {
 }
 
 .hero-content h2 {
-    font-size: 36px;
+    font-size: 40px;
     margin-bottom: 20px;
+    color: #f39c12; /* Accentkleur voor de headline */
 }
 
 .hero-content span {
-    color: #1e1e2f;
+    color: #ffffff;
 }
 
 .hero-content p {
@@ -77,8 +92,8 @@ nav ul li a:hover {
 }
 
 .btn {
-    padding: 10px 20px;
-    background-color: #1e1e2f;
+    padding: 12px 25px;
+    background-color: #f39c12;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -86,17 +101,29 @@ nav ul li a:hover {
 }
 
 .btn:hover {
-    background-color: #444;
+    background-color: #e67e22;
 }
 
 #over-mij, #vaardigheden, footer {
-    padding: 60px 20px;
+    padding: 80px 20px;
     text-align: center;
-    background-color: #f4f4f9;
+}
+
+#over-mij {
+    background-color: #1a1a1a;
+}
+
+.about-content {
+    background-color: #0d0d0d; /* Donkere achtergrond voor Over Mij */
+    padding: 30px; /* Ruimte rondom de tekst */
+    border-radius: 8px; /* Afgeronde hoeken */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Schaduw voor diepte */
+    max-width: 800px; /* Maximale breedte */
+    margin: 0 auto; /* Center de sectie */
 }
 
 #vaardigheden {
-    background-color: #1e1e2f;
+    background-color: #0d0d0d;
     color: white;
 }
 
@@ -108,37 +135,113 @@ nav ul li a:hover {
 }
 
 .skills-list li {
-    margin: 0 15px;
+    margin: 0 20px;
     font-size: 18px;
     font-weight: 500;
     padding: 10px 20px;
-    background-color: #61dafb;
-    color: #1e1e2f;
-    border-radius: 8px;
-}
-
-footer {
     background-color: #333;
+    color: #f39c12;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.skills-list li i {
+    margin-right: 10px;
+}
+
+.skills-list li:hover {
+    transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+    background-color: #0d0d0d;
     color: white;
+    padding: 60px 20px;
+    text-align: center;
 }
 
-footer a {
-    color: #61dafb;
+.footer-content {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.contact-card {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 400px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+.contact-card h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #f39c12;
+}
+
+.contact-card p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #e5e5e5;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.contact-item i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #f39c12;
+}
+
+.contact-item span {
+    margin-right: 5px;
+    color: #e5e5e5;
+}
+
+.contact-item a {
+    color: #f39c12;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-footer a:hover {
-    text-decoration: underline;
+.contact-item a:hover {
+    color: #e67e22;
+}
+
+.footer-copyright {
+    margin-top: 40px;
+}
+
+.footer-copyright p {
+    font-size: 14px;
+    color: #888;
 }
 
 /* Animations */
-@keyframes slideInLeft {
+@keyframes fadeInDown {
     from {
-        transform: translateX(-100%);
+        transform: translateY(-20px);
         opacity: 0;
     }
     to {
-        transform: translateX(0);
+        transform: translateY(0);
         opacity: 1;
     }
 }
@@ -152,26 +255,29 @@ footer a:hover {
     }
 }
 
-@keyframes bounceIn {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-30px);
-    }
-    60% {
-        transform: translateY(-15px);
-    }
-}
-
-/* Fade-in for scroll animation */
 .fade-in-section {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    will-change: opacity, transform;
 }
+
 .fade-in-section.is-visible {
     opacity: 1;
     transform: none;
+}
+
+.hero-content h2 {
+    color: white; 
+    font-size: 40px; 
+}
+
+.highlight {
+    color: orange;
+}
+
+.fivem-logo {
+    width: 24px; 
+    height: auto; 
+    margin-right: 5px; 
+    vertical-align: middle; 
 }
